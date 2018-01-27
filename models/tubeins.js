@@ -190,4 +190,4 @@ class TubeinsModel {
 }
 
 const Tubeins = tubeinsSchema.loadClass(TubeinsModel);
-module.exports = connection.model("Tubeins", Tubeins);
+module.exports = mongoose.model("Tubeins", Tubeins);

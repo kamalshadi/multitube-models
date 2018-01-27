@@ -24,7 +24,7 @@ class acpModel {
 }
 
 acpSchema.loadClass(acpModel);
-const ACP = connection.model('ACP', acpSchema);
+const ACP = mongoose.model('ACP', acpSchema);
 
 
 module.exports = ACP;

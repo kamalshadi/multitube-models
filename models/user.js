@@ -61,7 +61,7 @@ class UserModel {
 }
 
 userSchema.loadClass(UserModel);
-const User = connection.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 
 module.exports = User;

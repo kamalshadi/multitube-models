@@ -143,4 +143,4 @@ class EventModel {
 }
 
 const Event = eventSchema.loadClass(EventModel);
-module.exports = connection.model("Event", Event);
+module.exports = mongoose.model("Event", Event);

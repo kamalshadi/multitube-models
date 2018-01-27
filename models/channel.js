@@ -45,6 +45,6 @@ class ChannelModel {
 }
 
 channelSchema.loadClass(ChannelModel);
-const Channel = connection.model('Channel', channelSchema);
+const Channel = mongoose.model('Channel', channelSchema);
 
 module.exports = Channel;
