@@ -1,0 +1,24 @@
+{
+  "name": "multitube-models",
+  "version": "1.0.0",
+  "description": "This repo contains all models used in multitube products",
+  "main": "model_app.js",
+  "scripts": {
+    "start": "node model_app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamalshadi/multitube-models.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamalshadi/multitube-models/issues"
+  },
+  "homepage": "https://github.com/kamalshadi/multitube-models#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1"
+  }
+}

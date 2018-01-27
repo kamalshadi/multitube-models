@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const connection = require('../app').connection;
+const connection = require('../model_app').connection;
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({

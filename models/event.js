@@ -1,6 +1,6 @@
 var mongoose = require("mongoose"),
   Schema = mongoose.Schema;
-const connection = require('../app').connection;
+const connection = require('../model_app').connection;
 
 function add(a, b) {
     return a + b;
