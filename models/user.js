@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-// const connection = require('../model_app').connection;
+const connection = require('../model_app').connection;
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -61,7 +61,7 @@ class UserModel {
 }
 
 userSchema.loadClass(UserModel);
-const User = mongoose.model('User', userSchema);
+const User = connection.model('User', userSchema);
 
 
 module.exports = User;

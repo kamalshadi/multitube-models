@@ -1,6 +1,6 @@
 const mongoose = require("mongoose"),
   Schema = mongoose.Schema;
-// const connection = require('../model_app').connection;
+const connection = require('../model_app').connection;
 
 const channelSchema = new Schema({
   account: { type: Schema.Types.ObjectId, ref: 'User' }, // by object id of user not userID
@@ -45,6 +45,6 @@ class ChannelModel {
 }
 
 channelSchema.loadClass(ChannelModel);
-const Channel = mongoose.model('Channel', channelSchema);
+const Channel = connection.model('Channel', channelSchema);
 
 module.exports = Channel;

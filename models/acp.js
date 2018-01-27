@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const connection = require('../model_app').connection;
+const connection = require('../model_app').connection;
 const Schema = mongoose.Schema;
 
 const acpSchema = new Schema({
@@ -24,7 +24,7 @@ class acpModel {
 }
 
 acpSchema.loadClass(acpModel);
-const ACP = mongoose.model('ACP', acpSchema);
+const ACP = connection.model('ACP', acpSchema);
 
 
 module.exports = ACP;

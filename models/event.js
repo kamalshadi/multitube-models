@@ -1,6 +1,6 @@
 var mongoose = require("mongoose"),
   Schema = mongoose.Schema;
-// const connection = require('../model_app').connection;
+const connection = require('../model_app').connection;
 
 function add(a, b) {
     return a + b;
@@ -143,4 +143,4 @@ class EventModel {
 }
 
 const Event = eventSchema.loadClass(EventModel);
-module.exports = mongoose.model("Event", Event);
+module.exports = connection.model("Event", Event);
