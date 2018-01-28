@@ -124,5 +124,5 @@ class TubeinModel {
 
 const Tubein = tubeinSchema.loadClass(TubeinModel);
 const Tubeins = tubeinsSchema.loadClass(TubeinsModel);
-module.exports.Tubeins = mongoose.model("Tubeins", Tubeins);
-module.exports.Tubein = mongoose.model("Tubein", Tubein);
+module.exports.Tubeins = connection.model("Tubeins", Tubeins);
+module.exports.Tubein = connection.model("Tubein", Tubein);
