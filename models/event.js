@@ -87,7 +87,7 @@ var eventSchema = new Schema({
     question:String,
     options:[String],
     votes:{type:[Number], default:[0,0,0,0]},
-    isUserVoted:Boolean,
+    isUserVoted:{type:Boolean, default:false},
     startTime:Date,
     endTime:Date,
     questionLogoUrl:String, // save in multitube-tubes-assets/poll.png
