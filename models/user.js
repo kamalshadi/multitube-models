@@ -42,6 +42,15 @@ userSchema.pre('save', function(next) {
 
 class UserModel {
 
+
+  // removing sensitive information for response
+  trimmed() {
+    const user = this.toJSON();
+    delete user.password;
+    return user;
+  }
+
+
   verifyPassword(password) {
     return bcrypt.compareSync(password, this.password);
   }
