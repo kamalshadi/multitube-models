@@ -133,13 +133,22 @@ eventSchema.pre('save', function(next) {
 });
 
 class EventModel {
-
   hasUserJoined(userID) {
-    const flattenedArr = (this.eventInfo.tubeins || []).map(arr => {
-      return arr["userID"].toString();
-    });
-    return flattenedArr.indexOf(userID) > -1
-  }
+
+  const flattenedArr = (this.eventInfo.tubeins || []).map(arr => {
+    return arr["userID"].toString();
+  });
+
+  return flattenedArr.indexOf(userID) > -1
+}
+
+hasUserVoted(userID) {
+  const flattenedArr = (this.eventInfo.polls || []).map(arr => {
+    return arr["userID"].toString();
+  });
+
+  return flattenedArr.indexOf(userID) > -1
+}
 }
 
 const Event = eventSchema.loadClass(EventModel);
