@@ -54,6 +54,12 @@ var eventSchema = new Schema({
         userTubeinStatus : String
       }
     ], // push Notify all these devices.
+    polls:[
+      {
+        "userID" :{type: Schema.Types.ObjectId, ref: 'User'},
+        "userVote" : String //it's not used anymore
+      }
+    ],
     dateSubmitted:String,
     description:String,
     duration:Number,
@@ -96,6 +102,9 @@ var eventSchema = new Schema({
 
 eventSchema.pre('save', function(next) {
   console.log('inside event')
+  if (!this.poll && this.isPollSetup){
+    this.eventInfo.polls = []
+  }
   this.updated_at = new Date();
   if (this.eventInfo.airTimeAvailable.reduce(add) == 0){ // initial condition
     this.eventInfo.airTimeAvailable = [0,0];
