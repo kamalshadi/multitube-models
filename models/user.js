@@ -17,12 +17,15 @@ const userSchema = new Schema({
   verified: {type: Boolean, default: false},
   verificationToken: {type: String, unique: true, sparse: true},
   passRecoveryToken: {type: String, unique: true, sparse: true},
+  website:String,
   geo:{
     city: {type:String, default:""},
     country: {type:String, default:""},
     state: {type:String, default:""},
     latitude: Number,
-    longitude: Number
+    longitude: Number,
+    zip:Number,
+    streetAddress:String
   },
   selectedCountry: String,
   membership: {type:String, default:"trial"},
