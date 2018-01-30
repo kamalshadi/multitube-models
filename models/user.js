@@ -24,8 +24,8 @@ const userSchema = new Schema({
     state: {type:String, default:""},
     latitude: Number,
     longitude: Number,
-    zip:Number,
-    streetAddress:String
+    zip: {type:String, default:""},
+    streetAddress: { type:String, default:"" }
   },
   selectedCountry: String,
   membership: {type:String, default:"trial"},
