@@ -29,7 +29,7 @@ const userSchema = new Schema({
   },
   selectedCountry: String,
   membership: {type:String, default:"trial"},
-  subscribedChannel:[{ type: Schema.Types.ObjectId, ref: 'Channel' }],
+  subscribedChannels:[{ type: Schema.Types.ObjectId, ref: 'Channel' }],
   moderator:{type:Boolean, default:false},
   ACP_Level:{ type: Number, default:-1 },
   isTubeiner:Boolean,
