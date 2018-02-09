@@ -63,7 +63,7 @@ const userSchema = new Schema({
         bgColor: String
       }
     }
-  }
+  },
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
 });
