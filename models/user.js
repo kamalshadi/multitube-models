@@ -34,7 +34,7 @@ const userSchema = new Schema({
   ACP_Level:{ type: Number, default:-1 },
   isTubeiner:Boolean,
   kind:{type:String, default:"tubeiner"},
-  var brand = {
+  brand : {
     comment: {
       header: {
         textColor:String,
