@@ -15,6 +15,7 @@ const channelSchema = new Schema({
   numberOfSubscribers: {Number, default:0},
   channelType: { type: String, required: true },
   broadcastType: { type: String},
+  liveStreamingKey: { type: String},
   description: String,
   sessionID: String, //opentok
   rtmp: String,
