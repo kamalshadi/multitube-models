@@ -34,6 +34,36 @@ const userSchema = new Schema({
   ACP_Level:{ type: Number, default:-1 },
   isTubeiner:Boolean,
   kind:{type:String, default:"tubeiner"},
+  var brand = {
+    comment: {
+      header: {
+        textColor:String,
+        gradColor1:String,
+        gradColor2:String
+      },
+      body: {
+        textColor:String,
+        gradColor1:String,
+        gradColor2:String
+      }
+    },
+    infoText: {
+      header: {
+        textColor:String,
+        gradColor1: String,
+        gradColor2:String
+      },
+      body: {
+        textColor:String,
+        gradColor1:String,
+        gradColor2:String
+      },
+      live: {
+        textColor:String,
+        bgColor: String
+      }
+    }
+  }
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
 });
