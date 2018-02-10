@@ -35,6 +35,7 @@ const userSchema = new Schema({
   isTubeiner:Boolean,
   kind:{type:String, default:"tubeiner"},
   brand : {
+    hasLogo:{type:Boolean, default:false},
     comment: {
       header: {
         textColor:String,
