@@ -1,5 +1,6 @@
 const mongoose = require("mongoose"),
   Schema = mongoose.Schema;
+const connection = require('../model_app').connection;
 
 const requestSchema = new Schema({
   sender_user: { type: Schema.Types.ObjectId, ref: 'User' }, // Who is sending the request
@@ -11,7 +12,7 @@ const requestSchema = new Schema({
   selectedScreenSize : String,
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
-}, { collection: 'Requests' });
+}, { collection: 'requests' });
 
  requestSchema.pre('save', function(next) {
   this.updated_at = new Date();
@@ -22,6 +23,6 @@ class requestsModel {
 }
 
 requestSchema.loadClass(requestsModel);
-const Request = mongoose.model('Request', requestSchema);
+const Request = connection.model('Request', requestSchema);
 
 module.exports = Request;
