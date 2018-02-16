@@ -4,7 +4,7 @@ const connection = require('../model_app').connection;
 
 const requestSchema = new Schema({
   sender_user: { type: Schema.Types.ObjectId, ref: 'User' }, // Who is sending the request
-  target_channel : String,
+  target_channel : { type: Schema.Types.ObjectId, ref: 'Channel' }, //
   requestType: String,
   note : String,
   selectedAirTime : Number,
