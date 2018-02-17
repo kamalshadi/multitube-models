@@ -66,7 +66,8 @@ const userSchema = new Schema({
     }
   },
   stripe:{
-    customerID:{type:String}
+    customerID:{type:String},
+    ephemeral:{type:String}
   },
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
