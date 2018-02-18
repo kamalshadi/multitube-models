@@ -82,6 +82,14 @@ var eventSchema = new Schema({
     created_at:  { type: Date, default: Date.now },
     updated_at:  { type: Date, default: Date.now }
   },
+  cameras:{
+      main:{
+        type:String, default:"self"
+      },
+      others:{
+        type:[Schema.Types.ObjectId], ref: 'User', default:[]
+      }
+    },
   isPollSetup: { type: Boolean, default: false },
   pollInfo:{
     question:String,
