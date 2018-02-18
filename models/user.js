@@ -66,6 +66,7 @@ const userSchema = new Schema({
     }
   },
   stripe:{
+    isSuccess:{type:String},
     customerID:{type:String},
     ephemeral:{type:String}
   },
