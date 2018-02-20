@@ -10,6 +10,7 @@ const requestSchema = new Schema({
   selectedAirTime : Number,
   offeredMoney : Number,
   selectedScreenSize : String,
+  userRequestStatus:{type:String, default:'pending'},
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
 }, { collection: 'requests' });
