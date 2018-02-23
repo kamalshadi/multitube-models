@@ -27,6 +27,7 @@ const userSchema = new Schema({
     zip: {type:String, default:""},
     streetAddress: { type:String, default:"" }
   },
+  badge:{type:Number, default:0},
   selectedCountry: String,
   membership: {type:String, default:"trial"},
   subscribedChannels:[{ type: Schema.Types.ObjectId, ref: 'Channel' }],
