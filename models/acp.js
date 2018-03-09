@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const acpSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' }, // by object id of user not userID
   content_provider:String,
+  email: String,
   rating:String,
   genre:String,
   synopsis:String,
