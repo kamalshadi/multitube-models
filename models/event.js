@@ -15,9 +15,11 @@ var eventSchema = new Schema({
   },
   liveInfo:{
     feedID:String,
-    noLike:Number,
-    noViewer:Number,
-    thumbnail:String
+    noLike:{type:Number, default:117},
+    noViewer:{type:Number, , default:321},
+    hls:{type:String, default:"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"},
+    rtmp:{type:String, default:""},
+    thumbnail:{type:String, default:"https://gogojets.com/img/video_atl.jpg"}
   },
   tubeinInfo:{
     userTubeinStatus:{type:String, default:"pending"},
