@@ -69,7 +69,10 @@ const userSchema = new Schema({
   stripe:{
     isSuccess:{type:String},
     customerID:{type:String},
-    ephemeral:{type:String}
+    ephemeral:{type:String},
+    isCardListed:{type:Boolean, default:false},
+    last4Digits:{type:String},
+    chargeable:{type:Boolean, default:false}
   },
   created_at:  { type: Date, default: Date.now },
   updated_at:  { type: Date, default: Date.now }
