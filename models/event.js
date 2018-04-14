@@ -26,8 +26,12 @@ var eventSchema = new Schema({
     isUserJoined:{type:Boolean, default:false},
     openTokToken:String
   },
-
-
+  settings:{
+    autoTimeline:{type:Boolean, default:false},
+    liveTubeins:{type:Boolean, default:true},
+    dashboardCamera:{type:Boolean, default:true},
+    archiving:{type:Boolean, default:false}
+  },
   notifications:{ // notification settings and status for the event moderator
     email:{
       permit:{type:Boolean,default:true},
