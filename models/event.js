@@ -27,10 +27,10 @@ var eventSchema = new Schema({
     openTokToken:String
   },
   settings:{
-    autoTimeline:{type:Boolean, default:false},
-    liveTubeins:{type:Boolean, default:true},
-    dashboardCamera:{type:Boolean, default:true},
-    archiving:{type:Boolean, default:false}
+    isAutoTimeline:{type:Boolean, default:false},
+    isLiveTubeins:{type:Boolean, default:true},
+    isDashboardCamera:{type:Boolean, default:true},
+    isArchiving:{type:Boolean, default:false}
   },
   notifications:{ // notification settings and status for the event moderator
     email:{
