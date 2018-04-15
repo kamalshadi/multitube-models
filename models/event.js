@@ -24,7 +24,8 @@ var eventSchema = new Schema({
   tubeinInfo:{
     userTubeinStatus:{type:String, default:"pending"},
     isUserJoined:{type:Boolean, default:false},
-    openTokToken:String
+    openTokToken:String,
+    statusChangeTime:{typpe:Number, default:1523823404}
   },
   settings:{
     isAutoTimeline:{type:Boolean, default:false},
@@ -57,7 +58,8 @@ var eventSchema = new Schema({
     tubeins:[
       {
         userID :{type: Schema.Types.ObjectId, ref: 'User'},
-        userTubeinStatus : String
+        userTubeinStatus : String,
+        statusChangeTime:Number
       }
     ], // push Notify all these devices.
     polls:[
