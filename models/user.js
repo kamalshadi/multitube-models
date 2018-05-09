@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   phoneNumber: { type: String, index: true, unique: true, sparse: true, trim: true },
-  deviceToken: { type: String, unique: true, sparse: true },
+  deviceToken: { type: String},
   channels: [{ type: Schema.Types.ObjectId, ref: 'Channel' }], //Array of object ids of channel not channelID
   fullName: {type:String, required:true},
   hasProfileImage:{type:Boolean, default:false},
