@@ -25,7 +25,7 @@ var eventSchema = new Schema({
     userTubeinStatus:{type:String, default:"pending"},
     isUserJoined:{type:Boolean, default:false},
     openTokToken:String,
-    statusChangeTime:{typpe:Number, default:1523823404}
+    statusChangeTime:{type:Number, default:1523823404}
   },
   settings:{
     isAutoTimeline:{type:Boolean, default:false},
