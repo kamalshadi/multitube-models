@@ -15,6 +15,9 @@ var eventSchema = new Schema({
   },
   liveInfo:{
     feedID:String,
+    userTime:{type:Number, default:180},
+    totalTime:{type:Number, default:3600},
+    passedTime:{type:Number, default:600},
     noLike:{type:Number, default:117},
     noViewer:{type:Number, default:321},
     hls:{type:String, default:"http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"},
