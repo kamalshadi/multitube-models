@@ -10,7 +10,7 @@ const channelSchema = new Schema({
   hasPromoImage:{type:Boolean,default:false},
   hasLogo: {type:Boolean,default:false},
   // nextLiveEvent: { type: Date, default: Date.now },
-  nextLiveEvent: { type: Number, default: function(){return new Date().getTime()} },
+  nextLiveEvent: { type: Number, default: 0 },
   name: { type: String, required: true },
   numberOfSubscribers: {Number, default:0},
   channelType: { type: String, required: true },
