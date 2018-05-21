@@ -57,7 +57,7 @@ var eventSchema = new Schema({
     tweetText:String,
     invitees:[String],
     airTimeAvailable: {type:[Number], default:[0,0]}, // how much airtime is available for each tubeins
-    availableTubeinSpot: [Number], // how much tubeins we have in each block
+    availableTubeinSpot: {type:[Number], default:[0,0]}, // how much tubeins we have in each block
     tubeins:[
       {
         userID :{type: Schema.Types.ObjectId, ref: 'User'},
@@ -74,7 +74,7 @@ var eventSchema = new Schema({
     dateSubmitted:String,
     description:String,
     duration:Number,
-    totalTubeinSpot:[Number],
+    totalTubeinSpot:{type:[Number], default:[0,0]},
     geo: { // google geolocation info
       latitude:Number,
       longitude:Number,
