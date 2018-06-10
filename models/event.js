@@ -134,7 +134,6 @@ var eventSchema = new Schema({
 },{ collection: 'events' });
 
 eventSchema.pre('save', function(next) {
-  this.pollInfo.votesPercent = num2percent(this.pollInfo.votes)
   if (!this.poll && this.isPollSetup){
     this.eventInfo.polls = []
   }
@@ -173,12 +172,7 @@ eventSchema.pre('save', function(next) {
   next();
 });
 
-eventSchema.pre('update', function(next) {
-  console.log('mongoose update middleware')
-  console.log(this)
-  this.pollInfo.votesPercent = num2percent(this.pollInfo.votes)
-  next();
-})
+
 
 class EventModel {
   hasUserJoined(userID) {
