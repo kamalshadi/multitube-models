@@ -173,7 +173,7 @@ eventSchema.pre('save', function(next) {
   next();
 });
 
-eventSchema.post('update', function(next) {
+eventSchema.pre('update', function(next) {
   console.log('mongoose update middleware')
   this.pollInfo.votesPercent = num2percent(this.pollInfo.votes)
 })
