@@ -175,7 +175,9 @@ eventSchema.pre('save', function(next) {
 
 eventSchema.pre('update', function(next) {
   console.log('mongoose update middleware')
+  console.log(this)
   this.pollInfo.votesPercent = num2percent(this.pollInfo.votes)
+  next();
 })
 
 class EventModel {
