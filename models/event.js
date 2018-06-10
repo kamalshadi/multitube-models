@@ -6,6 +6,19 @@ function add(a, b) {
     return a + b;
 }
 
+function num2percent(a) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const asum = a.reduce(reducer)
+  if (asum === 0){
+    return a
+  }
+  var perc = a.map((x)=> x*100.0/asum)
+  if (perc.reduce(reducer)>100){
+    perc[perc.length-1] = 100 - perc.slice(0,perc.length-1).reduce(reducer)
+  }
+  return perc
+}
+
 var eventSchema = new Schema({
   account:{type: Schema.Types.ObjectId, ref: 'User' },
   channel:{ type: Schema.Types.ObjectId, ref: 'Channel' },
@@ -106,6 +119,7 @@ var eventSchema = new Schema({
     question:String,
     options:[String],
     votes:{type:[Number], default:[0,0,0,0]},
+    votesPercent:{type:[Number], default:[0,0,0,0]},
     isUserVoted:{type:Boolean, default:false},
     startTime:Date,
     endTime:Date,
@@ -120,7 +134,7 @@ var eventSchema = new Schema({
 },{ collection: 'events' });
 
 eventSchema.pre('save', function(next) {
-  console.log('inside event')
+  this.pollInfo.votesPercent = num2percent(this.pollInfo.votes)
   if (!this.poll && this.isPollSetup){
     this.eventInfo.polls = []
   }
@@ -156,7 +170,6 @@ eventSchema.pre('save', function(next) {
       this.eventInfo.availableTubeinSpot.push(0)
     }
     }
-    console.log('coming out')
   next();
 });
 
