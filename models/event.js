@@ -140,7 +140,7 @@ var eventSchema = new Schema({
     correctOption:String
   },
   questionInfo:{
-       "isSuccess" : Boolean,
+       isSuccess : Boolean,
         type :String,
         scoreType:String,
         roundType:String,
