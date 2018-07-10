@@ -146,7 +146,7 @@ var eventSchema = new Schema({
         roundType:{type:String, default:""},
         roundsNumber:{type:Number, default:0},
         questionsNumber:{type:[Number], default:[0]},
-        participantNumber:{type:[Number], default:[0]},,
+        participantNumber:{type:[Number], default:[0]},
         optionNumber:{type:[Number], default:[0]},
         eliminationDescription :{type:[Number], default:[0]},
         timerNumber:{type:[Number], default:[0]},
