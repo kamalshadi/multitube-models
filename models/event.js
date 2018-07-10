@@ -19,6 +19,15 @@ function num2percent(a) {
   return perc
 }
 
+const questionsSchema = new Schema([
+  {
+    "question":String,
+    "options":[String],
+    "correctOption":Number
+
+  }
+])
+
 var eventSchema = new Schema({
   account:{type: Schema.Types.ObjectId, ref: 'User' },
   channel:{ type: Schema.Types.ObjectId, ref: 'Channel' },
@@ -115,6 +124,7 @@ var eventSchema = new Schema({
       }
     },
   isPollSetup: { type: Boolean, default: false },
+  isQuestionSetup: { type: Boolean, default: false },
   pollInfo:{
     question:String,
     options:[String],
@@ -130,7 +140,32 @@ var eventSchema = new Schema({
     drawFrom:String,
     rewards:[String,Number],
     correctOption:String
+  },
+  questionInfo:{
+      {
+         "isSuccess" : Boolean,
+          type :String,
+          scoreType:String,
+          roundType:String,
+          roundsNumber:Number,
+          questionsNumber:[Number],
+          participantNumber:[Number],
+          optionNumber:[Number],
+          eliminationDescription :[Number],
+          timerNumber:[Number],
+          scoreNumber:[Number],
+          orderToShow :[],
+          awardQuantity:Number,
+          awardDescription:[String],
+          awardDistribution:[String,],
+          isTimed:Boolean,
+          isLatencyAffected:Boolean,
+          isEliminationConsidered:Boolean,
+
+          questionare: [questionsSchema]
+      }
   }
+
 },{ collection: 'events' });
 
 eventSchema.pre('save', function(next) {
