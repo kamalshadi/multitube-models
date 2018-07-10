@@ -155,9 +155,9 @@ var eventSchema = new Schema({
         awardQuantity:Number,
         awardDescription:[String],
         awardDistribution:[String],
-        isTimed:{ type: Boolean, default: false }
-        isLatencyAffected:{ type: Boolean, default: false }
-        isEliminationConsidered:{ type: Boolean, default: false }
+        isTimed:{ type: Boolean, default: false },
+        isLatencyAffected:{ type: Boolean, default: false },
+        isEliminationConsidered:{ type: Boolean, default: false },
 
         questionare: [[questionsSchema]]
   }
