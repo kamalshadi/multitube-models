@@ -19,12 +19,12 @@ function num2percent(a) {
   return perc
 }
 
-const questionsSchema = new Schema({
-    "question":String,
-    "options":[String],
-    "correctOption":Number
-
-})
+// const questionsSchema = new Schema({
+//     "question":String,
+//     "options":[String],
+//     "correctOption":Number
+//
+// })
 
 var eventSchema = new Schema({
   account:{type: Schema.Types.ObjectId, ref: 'User' },
@@ -159,7 +159,7 @@ var eventSchema = new Schema({
         isLatencyAffected:Boolean,
         isEliminationConsidered:Boolean,
 
-        questionare: [questionsSchema]
+        // questionare: [questionsSchema]
   }
 
 },{ collection: 'events' });
