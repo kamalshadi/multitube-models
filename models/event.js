@@ -20,9 +20,9 @@ function num2percent(a) {
 }
 
 const questionsSchema = new Schema({
-    "question":String,
-    "options":[String],
-    "correctOption":Number
+    "question":{type:String, default:""},
+    "options":[{type:String, default:""}],
+    "correctOption":{type:Number, default:0}
 
 })
 
@@ -141,20 +141,20 @@ var eventSchema = new Schema({
   },
   questionInfo:{
        isSuccess : { type: Boolean, default: false },
-        type :String,
-        scoreType:String,
-        roundType:String,
-        roundsNumber:Number,
-        questionsNumber:[Number],
-        participantNumber:[Number],
-        optionNumber:[Number],
-        eliminationDescription :[Number],
-        timerNumber:[Number],
-        scoreNumber:[Number],
-        orderToShow :[String],
-        awardQuantity:Number,
-        awardDescription:[String],
-        awardDistribution:[String],
+        type :{type:String, default:""},
+        scoreType:{type:String, default:""},
+        roundType:{type:String, default:""},
+        roundsNumber:{type:Number, default:0},
+        questionsNumber:{type:[Number], default:[0]},
+        participantNumber:{type:[Number], default:[0]},,
+        optionNumber:{type:[Number], default:[0]},
+        eliminationDescription :{type:[Number], default:[0]},
+        timerNumber:{type:[Number], default:[0]},
+        scoreNumber:{type:[Number], default:[0]},
+        orderToShow :[{type:String, default:""}],
+        awardQuantity:{type:Number, default:0},
+        awardDescription:[{type:String, default:""}],
+        awardDistribution:[{type:String, default:""}],
         isTimed:{ type: Boolean, default: false },
         isLatencyAffected:{ type: Boolean, default: false },
         isEliminationConsidered:{ type: Boolean, default: false },
