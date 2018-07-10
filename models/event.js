@@ -19,7 +19,7 @@ function num2percent(a) {
   return perc
 }
 
-const questionsSchema = new Schema({
+const questionSchema = new Schema({
     "question":{type:String, default:""},
     "options":[{type:String, default:""}],
     "correctOption":{type:Number, default:0}
@@ -159,7 +159,7 @@ var eventSchema = new Schema({
         isLatencyAffected:{ type: Boolean, default: false },
         isEliminationConsidered:{ type: Boolean, default: false },
 
-        questionare: [[questionsSchema]]
+        questionnaire: [[questionSchema]]
   }
 
 },{ collection: 'events' });
