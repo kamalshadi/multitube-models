@@ -19,12 +19,12 @@ function num2percent(a) {
   return perc
 }
 
-// const questionsSchema = new Schema({
-//     "question":String,
-//     "options":[String],
-//     "correctOption":Number
-//
-// })
+const questionsSchema = new Schema({
+    "question":String,
+    "options":[String],
+    "correctOption":Number
+
+})
 
 var eventSchema = new Schema({
   account:{type: Schema.Types.ObjectId, ref: 'User' },
@@ -140,26 +140,26 @@ var eventSchema = new Schema({
     correctOption:String
   },
   questionInfo:{
-       isSuccess : { type: Boolean, default: false }
-        // type :String,
-        // scoreType:String,
-        // roundType:String,
-        // roundsNumber:Number,
-        // questionsNumber:[Number],
-        // participantNumber:[Number],
-        // optionNumber:[Number],
-        // eliminationDescription :[Number],
-        // timerNumber:[Number],
-        // scoreNumber:[Number],
-        // orderToShow :[String],
-        // awardQuantity:Number,
-        // awardDescription:[String],
-        // awardDistribution:[String],
-        // isTimed:Boolean,
-        // isLatencyAffected:Boolean,
-        // isEliminationConsidered:Boolean,
+       isSuccess : { type: Boolean, default: false },
+        type :String,
+        scoreType:String,
+        roundType:String,
+        roundsNumber:Number,
+        questionsNumber:[Number],
+        participantNumber:[Number],
+        optionNumber:[Number],
+        eliminationDescription :[Number],
+        timerNumber:[Number],
+        scoreNumber:[Number],
+        orderToShow :[String],
+        awardQuantity:Number,
+        awardDescription:[String],
+        awardDistribution:[String],
+        isTimed:{ type: Boolean, default: false }
+        isLatencyAffected:{ type: Boolean, default: false }
+        isEliminationConsidered:{ type: Boolean, default: false }
 
-        // questionare: [questionsSchema]
+        questionare: [[questionsSchema]]
   }
 
 },{ collection: 'events' });
