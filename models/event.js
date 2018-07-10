@@ -142,28 +142,26 @@ var eventSchema = new Schema({
     correctOption:String
   },
   questionInfo:{
-      {
-         "isSuccess" : Boolean,
-          type :String,
-          scoreType:String,
-          roundType:String,
-          roundsNumber:Number,
-          questionsNumber:[Number],
-          participantNumber:[Number],
-          optionNumber:[Number],
-          eliminationDescription :[Number],
-          timerNumber:[Number],
-          scoreNumber:[Number],
-          orderToShow :[],
-          awardQuantity:Number,
-          awardDescription:[String],
-          awardDistribution:[String,],
-          isTimed:Boolean,
-          isLatencyAffected:Boolean,
-          isEliminationConsidered:Boolean,
+       "isSuccess" : Boolean,
+        type :String,
+        scoreType:String,
+        roundType:String,
+        roundsNumber:Number,
+        questionsNumber:[Number],
+        participantNumber:[Number],
+        optionNumber:[Number],
+        eliminationDescription :[Number],
+        timerNumber:[Number],
+        scoreNumber:[Number],
+        orderToShow :[],
+        awardQuantity:Number,
+        awardDescription:[String],
+        awardDistribution:[String,],
+        isTimed:Boolean,
+        isLatencyAffected:Boolean,
+        isEliminationConsidered:Boolean,
 
-          questionare: [questionsSchema]
-      }
+        questionare: [questionsSchema]
   }
 
 },{ collection: 'events' });
