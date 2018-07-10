@@ -20,7 +20,6 @@ function num2percent(a) {
 }
 
 const questionsSchema = new Schema({
-  {
     "question":String,
     "options":[String],
     "correctOption":Number
