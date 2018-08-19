@@ -10,6 +10,7 @@ const userSchema = new Schema({
   fullName: {type:String, required:true},
   hasProfileImage:{type:Boolean, default:false},
   email: { type: String, index: true, unique: true, trim: true, lowercase: true, sparse: true },
+  dob:{type: String, default:'00/00/0000'},
   address: String,
   password: String,
   provider: String,
